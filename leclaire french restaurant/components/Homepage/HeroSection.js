@@ -16,8 +16,8 @@ import btnStyles from "../../app/styles/button.module.css";
 
 const HeroSection = () => {
   return (
-    <Container>
-      <Container className={styles.heroSection}>
+    <Box>
+      <div className={styles.heroSection}>
         <Layout>
           <Box maxWidth="1000" width="100%">
             <Box ml={30}>
@@ -37,23 +37,33 @@ const HeroSection = () => {
               </Text>
               <ButtonGroup spacing={30} mt={30}>
                 <Button
+                  size="lg"
+                  borderRadius="none"
+                  fontFamily="Open Sans"
+                  color="white"
+                  border="1px solid #DCB015"
                   className={btnStyles.btnContainer}
-                  
+                  _hover={{ color: "#DCB015" }}
                 >
-                  <Heading as="h3">View Menu</Heading>
+                  View Menu
                 </Button>
                 <Button
+                  size="lg"
+                  borderRadius="none"
+                  fontFamily="Open Sans"
+                  color="white"
+                  border="1px solid #DCB015"
                   className={btnStyles.btnContainer}
-                
+                  _hover={{ color: "#DCB015" }}
                 >
-                  <Heading as="h3">Reserve</Heading>
+                  Reserve
                 </Button>
               </ButtonGroup>
             </Box>
           </Box>
         </Layout>
-      </Container>
-    </Container>
+      </div>
+    </Box>
   );
 };
 

@@ -9,10 +9,10 @@ import callInImg from "../../public/assets/images/callinbutton.jpg";
 import Image from "next/image";
 const DeliveryAndPickup = () => {
   return (
-    <Container>
+    <Box bg="black" color="white">
       <Layout>
         <Box maxWidth="1000" width="100%">
-          <Flex mt={60} mb={60} justifyContent="space-between">
+          <Flex mt={20} mb={20} justifyContent="space-between">
             <Box>
               {" "}
               <SectionHeading
@@ -20,6 +20,7 @@ const DeliveryAndPickup = () => {
                 content="Delivery and Pickup"
               ></SectionHeading>
               <Text
+                mt={3}
                 maxW={300}
                 fontFamily={"Open Sans"}
                 fontSize={18}
@@ -71,7 +72,7 @@ const DeliveryAndPickup = () => {
           </Flex>
         </Box>
       </Layout>
-    </Container>
+    </Box>
   );
 };
 

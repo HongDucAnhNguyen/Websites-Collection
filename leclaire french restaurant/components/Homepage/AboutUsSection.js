@@ -1,4 +1,11 @@
-import { Box, Button, Container, Flex, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  ChakraBaseProvider,
+  Container,
+  Flex,
+  Text,
+} from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import Layout from "../GlobalComponents/Layout";
@@ -7,23 +14,23 @@ import SectionHeading from "../GlobalComponents/SectionHeading";
 import styles from "../../app/styles/button.module.css";
 const AboutUsSection = () => {
   return (
-    <Container>
+    <Box bg="black" color="white">
       <Layout>
         <Box maxWidth="1000" width="100%">
-          <Flex mt={60} mb={60} justifyContent="space-between">
-            <Box>
+          <Flex mt={20} mb={20} justifyContent="space-between">
+           
               <Box position="relative" height={460} width={480}>
                 <Image fill={true} src={aboutImg} alt="about"></Image>
               </Box>
-            </Box>
+           
 
-            <Box >
+            <Box>
               <SectionHeading
                 maxWidth={500}
                 content="About Us"
               ></SectionHeading>
               <Text
-                marginTop={20}
+                marginTop={5}
                 fontSize={18}
                 color="white"
                 fontFamily={"Open Sans"}
@@ -33,7 +40,7 @@ const AboutUsSection = () => {
                 modern innovation in Calgary.
               </Text>
               <Text
-                marginTop={20}
+                marginTop={5}
                 fontSize={18}
                 color="white"
                 fontFamily={"Open Sans"}
@@ -44,7 +51,7 @@ const AboutUsSection = () => {
                 dining experience.
               </Text>
               <Text
-                marginTop={20}
+                marginTop={5}
                 fontSize={18}
                 color="white"
                 fontFamily={"Open Sans"}
@@ -55,11 +62,13 @@ const AboutUsSection = () => {
               </Text>
               <Button
                 className={styles.btnContainer}
-                marginTop={20}
-                width={150}
+                marginTop={10}
+                size="lg"
                 color="white"
-                bgColor="black"
                 border="1px solid #DCB015"
+                borderRadius="none"
+                _hover={{ color: "#DCB015" }}
+                fontFamily="Open Sans"
               >
                 <Text as="h3">About Us</Text>
               </Button>
@@ -67,7 +76,7 @@ const AboutUsSection = () => {
           </Flex>
         </Box>
       </Layout>
-    </Container>
+    </Box>
   );
 };
 

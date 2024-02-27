@@ -17,11 +17,12 @@ import {
 import Link from "next/link";
 import Layout from "./Layout";
 import styles from "../../app/styles/navbar.module.css";
-import FaceBookIconOutline from "../IconComponents/FaceBookIconOutline";
 import InstaIcon from "../IconComponents/InstaIcon";
+import FaceBookIconOutline from "../IconComponents/FaceBookIconOutline";
+
 const NavBar = () => {
   return (
-    <Container maxHeight={200}>
+    <Box pt={5} pb={5} bg="black" color="white">
       <Layout>
         <Flex
           justifyContent="space-between"
@@ -37,10 +38,10 @@ const NavBar = () => {
             </Link>
           </Box>
 
-          <Flex mr={50} className={styles.navLinks} gap={50}>
+          <Flex alignItems="center" className={styles.navLinks} gap={10}>
             <Link href="/menu">
               <Text
-                ml={10}
+              
                 _hover={{
                   cursor: "pointer",
                   color: "#dcb015",
@@ -50,7 +51,7 @@ const NavBar = () => {
                 Menu
               </Text>
             </Link>
-            <Menu className={styles.menuLinks}>
+            <Menu>
               <MenuButton
                 _hover={{
                   cursor: "pointer",
@@ -60,50 +61,46 @@ const NavBar = () => {
                 as={Box}
                 color="white"
               >
-                {" "}
-                <Text fontFamily="Open Sans" ml={10}>
+               
+                <Text fontFamily="Open Sans" fontSize="large">
                   Services
                 </Text>
               </MenuButton>
-              <MenuList minWidth="240px" minHeight="200px">
+              <MenuList border="none" bg="black" as={Box}>
                 <MenuItem
                   _hover={{ bg: "#dcb015", color: "white" }}
-                  as={Box}
                   bg="black"
                   color="white"
                 >
                   <Link href="/services">
-                    <Text ml={10}>All Services</Text>
+                    <Text >All Services</Text>
                   </Link>
                 </MenuItem>
                 <MenuItem
                   _hover={{ bg: "#dcb015", color: "white" }}
-                  as={Box}
                   bg="black"
                   color="white"
                 >
                   <Link href="/services/private-room">
-                    <Text ml={10}>Private Room Reservation</Text>
+                    <Text>Private Room Reservation</Text>
                   </Link>
                 </MenuItem>
                 <MenuItem
                   _hover={{ bg: "#dcb015", color: "white" }}
-                  as={Box}
                   bg="black"
                   color="white"
                 >
-                  <Link href="services/large-groups">
-                    <Text ml={10}>Large Groups Reservation</Text>
+                  <Link href="/services/large-groups">
+                    <Text>Large Groups Reservation</Text>
                   </Link>
                 </MenuItem>
                 <MenuItem
                   _hover={{ bg: "#dcb015", color: "white" }}
-                  as={Box}
                   bg="black"
                   color="white"
                 >
-                  <Link href="services/weddings">
-                    <Text ml={10}>Weddings Reservation</Text>
+                  <Link href="/services/weddings">
+                    <Text>Weddings Reservation</Text>
                   </Link>
                 </MenuItem>
               </MenuList>
@@ -115,7 +112,7 @@ const NavBar = () => {
                   color: "#dcb015",
                   transition: ".3s",
                 }}
-                ml={10}
+                
               >
                 About
               </Text>
@@ -127,15 +124,23 @@ const NavBar = () => {
                   color: "#dcb015",
                   transition: ".3s",
                 }}
-                ml={10}
+               
               >
                 Contact
               </Text>
             </Link>
+            <Flex gap={3}>
+              <Link href="/">
+                <FaceBookIconOutline></FaceBookIconOutline>
+              </Link>
+              <Link href="/">
+                <InstaIcon></InstaIcon>
+              </Link>
+            </Flex>
           </Flex>
         </Flex>
       </Layout>
-    </Container>
+    </Box>
   );
 };
 

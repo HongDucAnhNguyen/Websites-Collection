@@ -9,12 +9,12 @@ import SectionHeading from "../GlobalComponents/SectionHeading";
 import btnStyles from "../../app/styles/button.module.css";
 const ReservationsSection = () => {
   return (
-    <Container bg="#303030">
+    <Box bg="#303030">
       <Layout>
-        <Box mt={60} mb={60}>
+        <Box mt={20} mb={20}>
           <SectionHeading align="center" content="Reservations Services" />
           <Flex
-            mt={30}
+            mt={10}
             gap={50}
             alignItems="center"
             justifyContent="space-evenly"
@@ -28,12 +28,14 @@ const ReservationsSection = () => {
                 color="#DCB015"
                 fontSize={22}
                 fontFamily="Open Sans"
+                mt={5}
               >
                 Private Room
               </Heading>
               <Text
                 color="white"
                 fontFamily="Open Sans"
+                mt={5}
                 fontSize={18}
                 width={300}
               >
@@ -43,6 +45,7 @@ const ReservationsSection = () => {
               <Text
                 color="white"
                 fontFamily="Open Sans"
+                mt={5}
                 fontSize={18}
                 width={300}
               >
@@ -51,14 +54,25 @@ const ReservationsSection = () => {
               <Text
                 color="white"
                 fontFamily="Open Sans"
+                mt={5}
                 fontSize={18}
                 width={300}
               >
                 Enjoy personalized service, custom menus, and a secluded
                 ambiance.
               </Text>
-              <Button marginTop={20} className={btnStyles.btnContainer}>
-                <Text as="h3">Learn More</Text>
+              <Button
+                marginTop={20}
+                size="lg"
+                borderRadius="none"
+                fontFamily="Open Sans"
+                mt={10}
+                color="white"
+                border="1px solid #DCB015"
+                className={btnStyles.btnContainer}
+                _hover={{ color: "#DCB015" }}
+              >
+                Learn More
               </Button>
             </Box>
             <Box>
@@ -75,12 +89,14 @@ const ReservationsSection = () => {
                 color="#DCB015"
                 fontSize={22}
                 fontFamily="Open Sans"
+                mt={5}
               >
                 Large Groups
               </Heading>
               <Text
                 color="white"
                 fontFamily="Open Sans"
+                mt={5}
                 fontSize={18}
                 width={300}
               >
@@ -90,6 +106,7 @@ const ReservationsSection = () => {
               <Text
                 color="white"
                 fontFamily="Open Sans"
+                mt={5}
                 fontSize={18}
                 width={300}
               >
@@ -98,14 +115,25 @@ const ReservationsSection = () => {
               <Text
                 color="white"
                 fontFamily="Open Sans"
+                mt={5}
                 fontSize={18}
                 width={300}
               >
                 Special group menus available upon request, ensuring a memorable
                 dining experience.
               </Text>
-              <Button marginTop={20} className={btnStyles.btnContainer}>
-                <Text as="h3">Learn More</Text>
+              <Button
+                marginTop={20}
+                size="lg"
+                borderRadius="none"
+                fontFamily="Open Sans"
+                mt={10}
+                color="white"
+                border="1px solid #DCB015"
+                className={btnStyles.btnContainer}
+                _hover={{ color: "#DCB015" }}
+              >
+                Learn More
               </Button>
             </Box>
             <Box>
@@ -118,12 +146,14 @@ const ReservationsSection = () => {
                 color="#DCB015"
                 fontSize={22}
                 fontFamily="Open Sans"
+                mt={5}
               >
                 Weddings
               </Heading>
               <Text
                 color="white"
                 fontFamily="Open Sans"
+                mt={5}
                 fontSize={18}
                 width={300}
               >
@@ -133,6 +163,7 @@ const ReservationsSection = () => {
               <Text
                 color="white"
                 fontFamily="Open Sans"
+                mt={5}
                 fontSize={18}
                 width={300}
               >
@@ -141,19 +172,30 @@ const ReservationsSection = () => {
               <Text
                 color="white"
                 fontFamily="Open Sans"
+                mt={5}
                 fontSize={18}
                 width={300}
               >
                 Dedicated event coordinator to assist with planning.
               </Text>
-              <Button marginTop={20} className={btnStyles.btnContainer}>
-                <Text as="h3">Learn More</Text>
+              <Button
+                marginTop={20}
+                size="lg"
+                borderRadius="none"
+                fontFamily="Open Sans"
+                mt={10}
+                color="white"
+                border="1px solid #DCB015"
+                className={btnStyles.btnContainer}
+                _hover={{ color: "#DCB015" }}
+              >
+                Learn More
               </Button>
             </Box>
           </Flex>
         </Box>
       </Layout>
-    </Container>
+    </Box>
   );
 };
 

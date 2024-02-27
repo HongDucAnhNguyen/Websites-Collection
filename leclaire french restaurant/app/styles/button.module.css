@@ -1,16 +1,7 @@
 .btnContainer {
-  background-image: url("../../public/assets/images/french_floral_background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5px;
-  border: 1px solid #dcb015;
-  width: 150px;
-  color: white;
-  font-family: "Open Sans", sans-serif;
+  background-image: url("../../public/assets/images/french_floral_background.jpg") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
-.btnContainer :hover {
-  color: #dcb015;
-  transition: 0.3s;
-  cursor: pointer;
-}
+
