@@ -3,8 +3,8 @@ import { Providers } from "./providers";
 import Footer from "../components/GlobalComponents/Footer";
 import NavBar from "../components/GlobalComponents/NavBar";
 export const metadata = {
-  title: "",
-  description: "",
+  title: "Leclaire Restaurant",
+  description: "Leclaire YYC French Restaurant",
 };
 
 export default function RootLayout({ children }) {

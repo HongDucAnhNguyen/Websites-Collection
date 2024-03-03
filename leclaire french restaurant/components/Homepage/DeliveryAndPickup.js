@@ -11,7 +11,7 @@ const DeliveryAndPickup = () => {
   return (
     <Box bg="black" color="white">
       <Layout>
-        <Box maxWidth="1000" width="100%">
+       
           <Flex mt={20} mb={20} justifyContent="space-between">
             <Box>
               {" "}
@@ -70,7 +70,7 @@ const DeliveryAndPickup = () => {
               </GridItem>
             </Grid>
           </Flex>
-        </Box>
+        
       </Layout>
     </Box>
   );

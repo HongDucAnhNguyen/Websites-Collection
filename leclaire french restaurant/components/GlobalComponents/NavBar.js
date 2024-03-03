@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Box,
   ButtonGroup,
@@ -19,7 +21,7 @@ import Layout from "./Layout";
 import styles from "../../app/styles/navbar.module.css";
 import InstaIcon from "../IconComponents/InstaIcon";
 import FaceBookIconOutline from "../IconComponents/FaceBookIconOutline";
-
+import { ChevronDownIcon } from "@chakra-ui/icons";
 const NavBar = () => {
   return (
     <Box pt={5} pb={5} bg="black" color="white">
@@ -41,7 +43,6 @@ const NavBar = () => {
           <Flex alignItems="center" className={styles.navLinks} gap={10}>
             <Link href="/menu">
               <Text
-              
                 _hover={{
                   cursor: "pointer",
                   color: "#dcb015",
@@ -59,12 +60,15 @@ const NavBar = () => {
                   transition: ".3s",
                 }}
                 as={Box}
+                bg="black"
                 color="white"
               >
-               
-                <Text fontFamily="Open Sans" fontSize="large">
-                  Services
-                </Text>
+                <Flex gap={2} alignItems="center" >
+                  <Text fontFamily="Open Sans" fontSize="large">
+                    Services
+                  </Text>
+                  <ChevronDownIcon fontSize="large"></ChevronDownIcon>
+                </Flex>
               </MenuButton>
               <MenuList border="none" bg="black" as={Box}>
                 <MenuItem
@@ -73,7 +77,7 @@ const NavBar = () => {
                   color="white"
                 >
                   <Link href="/services">
-                    <Text >All Services</Text>
+                    <Text>All Services</Text>
                   </Link>
                 </MenuItem>
                 <MenuItem
@@ -112,7 +116,6 @@ const NavBar = () => {
                   color: "#dcb015",
                   transition: ".3s",
                 }}
-                
               >
                 About
               </Text>
@@ -124,7 +127,6 @@ const NavBar = () => {
                   color: "#dcb015",
                   transition: ".3s",
                 }}
-               
               >
                 Contact
               </Text>

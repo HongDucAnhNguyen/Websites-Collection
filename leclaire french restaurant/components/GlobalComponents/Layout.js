@@ -1,4 +1,4 @@
-import { Container, Flex } from "@chakra-ui/react";
+import { Box, Container, Flex } from "@chakra-ui/react";
 import React from "react";
 
 const Layout = ({ children, direction }) => {
@@ -10,7 +10,9 @@ const Layout = ({ children, direction }) => {
       alignItems="center"
       flexDirection={direction ? direction : "row"}
     >
-      {children}
+      <Box maxWidth={1000} width="100%">
+        {children}
+      </Box>
     </Flex>
   );
 };

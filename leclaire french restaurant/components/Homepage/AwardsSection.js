@@ -8,7 +8,7 @@ const AwardsSection = () => {
   return (
     <Box bg="black">
       <Layout>
-        <Box maxWidth="1000" width="100%">
+       
           <Flex gap={20} mt={20} mb={20} justifyContent="space-between">
             <Box position="relative" height={460} width={480}>
               <Image fill={true} src={awardsImage}></Image>
@@ -41,7 +41,7 @@ const AwardsSection = () => {
               </OrderedList>
             </Box>
           </Flex>
-        </Box>
+        
       </Layout>
     </Box>
   );
