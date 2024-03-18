@@ -13,6 +13,7 @@ const OurMissionSection = () => {
           <Flex gap={20} mt={20} mb={20}>
             <Box position="relative" height={460} width={480}>
               <Image
+              style={{objectFit:"cover"}}
                 fill={true}
                 src={ourMissionImg}
                 alt="our story img"

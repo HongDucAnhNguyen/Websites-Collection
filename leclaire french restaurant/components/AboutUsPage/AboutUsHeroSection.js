@@ -1,6 +1,6 @@
 import { Box, Flex, Text } from "@chakra-ui/react";
 import Layout from "../GlobalComponents/Layout";
-import styles from "../../app/styles/aboutus.module.css";
+import styles from "../../app/styles/hero.module.css";
 import SectionHeading from "../GlobalComponents/SectionHeading";
 const AboutUsHeroSection = () => {
   return (

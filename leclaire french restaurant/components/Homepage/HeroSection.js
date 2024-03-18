@@ -16,6 +16,7 @@ import Layout from "../GlobalComponents/Layout";
 import SectionHeading from "../GlobalComponents/SectionHeading";
 import btnStyles from "../../app/styles/button.module.css";
 import { motion } from "framer-motion";
+import Link from "next/link";
 const HeroSection = () => {
   const containerVariants = {
     visible: {
@@ -40,33 +41,33 @@ const HeroSection = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className={styles.heroSection}
+        className={styles.homeHeroSection}
       >
         <Layout>
-         
-            <Box ml={30}>
-              <motion.div variants={itemVariants}>
-                <SectionHeading
-                  size={64}
-                  maxWidth={500}
-                  content="Authentic French Cuisine"
-                ></SectionHeading>
-              </motion.div>
-              <motion.div variants={itemVariants}>
-                {" "}
-                <Text
-                  mt={30}
-                  fontSize={18}
-                  color="white"
-                  fontFamily={"Open Sans"}
-                  maxWidth="300"
-                >
-                  Serving our customers a taste of France in every bite.
-                </Text>
-              </motion.div>
+          <Box ml={30}>
+            <motion.div variants={itemVariants}>
+              <SectionHeading
+                size={64}
+                maxWidth={500}
+                content="Authentic French Cuisine"
+              ></SectionHeading>
+            </motion.div>
+            <motion.div variants={itemVariants}>
+              {" "}
+              <Text
+                mt={30}
+                fontSize={18}
+                color="white"
+                fontFamily={"Open Sans"}
+                maxWidth="300"
+              >
+                Serving our customers a taste of France in every bite.
+              </Text>
+            </motion.div>
 
-              <motion.div variants={itemVariants}>
-                <ButtonGroup spacing={30} mt={30}>
+            <motion.div variants={itemVariants}>
+              <ButtonGroup spacing={30} mt={30}>
+                <Link href="/menu">
                   <Button
                     size="lg"
                     borderRadius="none"
@@ -78,6 +79,8 @@ const HeroSection = () => {
                   >
                     View Menu
                   </Button>
+                </Link>
+                <Link href="/services">
                   <Button
                     size="lg"
                     borderRadius="none"
@@ -89,10 +92,10 @@ const HeroSection = () => {
                   >
                     Reserve
                   </Button>
-                </ButtonGroup>
-              </motion.div>
-            </Box>
-         
+                </Link>
+              </ButtonGroup>
+            </motion.div>
+          </Box>
         </Layout>
       </motion.div>
     </Box>

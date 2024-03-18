@@ -46,7 +46,7 @@ const DeliveryAndPickup = () => {
                   <Image
                     fill={true}
                     src={uberEatsImg}
-                    alt="skip the dishes"
+                    alt="uber eats"
                   ></Image>
                 </Box>
               </GridItem>
@@ -55,7 +55,7 @@ const DeliveryAndPickup = () => {
                   <Image
                     fill={true}
                     src={callInImg}
-                    alt="skip the dishes"
+                    alt="call in"
                   ></Image>
                 </Box>
               </GridItem>
@@ -64,12 +64,13 @@ const DeliveryAndPickup = () => {
                   <Image
                     fill={true}
                     src={doordashImg}
-                    alt="skip the dishes"
+                    alt="door dash"
                   ></Image>
                 </Box>
               </GridItem>
             </Grid>
           </Flex>
+         
         
       </Layout>
     </Box>

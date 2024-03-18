@@ -2,7 +2,7 @@ import { Box, Flex, Text } from "@chakra-ui/react";
 import React from "react";
 import Layout from "../GlobalComponents/Layout";
 import SectionHeading from "../GlobalComponents/SectionHeading";
-import styles from "../../app/styles/contactus.module.css";
+import styles from "../../app/styles/hero.module.css";
 const ContactUsHeroSection = () => {
   return (
     <Box>

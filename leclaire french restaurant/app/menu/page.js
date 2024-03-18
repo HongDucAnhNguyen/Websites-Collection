@@ -1,9 +1,18 @@
-import React from 'react'
+
+import Contact from "../../components/GlobalComponents/Contact";
+import DeliveryAndPickup from "../../components/Homepage/DeliveryAndPickup";
+import MenuPageHeroSection from "../../components/MenuPage/MenuPageHeroSection";
+import MenuPageMenuSection from "../../components/MenuPage/MenuPageMenuSection";
 
 const page = () => {
   return (
-    <div>page</div>
-  )
-}
+    <>
+      <MenuPageHeroSection></MenuPageHeroSection>
+      <MenuPageMenuSection></MenuPageMenuSection>
+      <DeliveryAndPickup></DeliveryAndPickup>
+      <Contact></Contact>
+    </>
+  );
+};
 
-export default page
+export default page;

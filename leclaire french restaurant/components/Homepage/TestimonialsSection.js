@@ -4,7 +4,7 @@ import { Box, ButtonGroup, Flex, IconButton, Text } from "@chakra-ui/react";
 import React from "react";
 import Layout from "../GlobalComponents/Layout";
 import SectionHeading from "../GlobalComponents/SectionHeading";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
 
 const TestimonialsSection = () => {
   return (
@@ -17,7 +17,7 @@ const TestimonialsSection = () => {
             maxWidth={500}
           ></SectionHeading>
           <Text
-            maxW={500}
+            maxW={400}
             fontFamily="Open Sans"
             fontSize={18}
             mt={2}
@@ -28,12 +28,8 @@ const TestimonialsSection = () => {
           </Text>
           <Flex justifyContent="flex-end">
             <ButtonGroup>
-              <IconButton
-                icon={<ChevronLeftIcon></ChevronLeftIcon>}
-              ></IconButton>
-              <IconButton
-                icon={<ChevronRightIcon></ChevronRightIcon>}
-              ></IconButton>
+              <IconButton icon={<FaChevronLeft />}></IconButton>
+              <IconButton icon={<FaChevronRight />}></IconButton>
             </ButtonGroup>
           </Flex>
           <Flex mt={5} gap={10} justifyContent="space-evenly">
@@ -45,9 +41,9 @@ const TestimonialsSection = () => {
                 fontSize={18}
                 fontWeight="semi-bold"
               >
-                “LeClaire exceeded my expectations! The ambiance was
-                captivating, the food divine, and the service impeccable. Can't
-                wait to return! “
+                "Celebrating at LeClaire was an unforgettable experience! The
+                ambiance was enchanting, the cuisine exceptional, and the
+                service impeccable. Looking forward to returning soon!"
               </Text>
 
               <Text
@@ -67,9 +63,9 @@ const TestimonialsSection = () => {
                 fontSize={18}
                 fontWeight="semi-bold"
               >
-                “LeClaire exceeded my expectations! The ambiance was
-                captivating, the food divine, and the service impeccable. Can't
-                wait to return! “
+                "LeClaire impressed me beyond measure! The atmosphere was
+                captivating, the cuisine exquisite, and the service flawless.
+                Already looking forward to my next visit!"
               </Text>
 
               <Text
@@ -78,7 +74,7 @@ const TestimonialsSection = () => {
                 fontSize={18}
                 fontWeight="bold"
               >
-                Johan Bordeaux
+                Louis Mouton
               </Text>
             </Box>{" "}
             <Box p={5} borderRadius={10} height={300} width={300} bg="white">
@@ -89,9 +85,9 @@ const TestimonialsSection = () => {
                 fontSize={18}
                 fontWeight="semi-bold"
               >
-                “LeClaire exceeded my expectations! The ambiance was
-                captivating, the food divine, and the service impeccable. Can't
-                wait to return! “
+                "LeClaire was an absolute delight! The ambiance was enchanting,
+                the food divine, and the service impeccable. Can't wait to
+                return for another memorable experience!"
               </Text>
 
               <Text
@@ -100,7 +96,7 @@ const TestimonialsSection = () => {
                 fontSize={18}
                 fontWeight="bold"
               >
-                Johan Bordeaux
+                Michelle Bernard
               </Text>
             </Box>
           </Flex>

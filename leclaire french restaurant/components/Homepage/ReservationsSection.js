@@ -7,18 +7,14 @@ import largeGroupsServiceImg from "../../public/assets/images/large_groups_servi
 import Image from "next/image";
 import SectionHeading from "../GlobalComponents/SectionHeading";
 import btnStyles from "../../app/styles/button.module.css";
+import Link from "next/link";
 const ReservationsSection = () => {
   return (
     <Box bg="#303030">
       <Layout>
         <Box mt={20} mb={20}>
           <SectionHeading align="center" content="Reservations Services" />
-          <Flex
-            mt={10}
-            gap={50}
-            alignItems="center"
-            justifyContent="space-evenly"
-          >
+          <Flex mt={10} gap={10} alignItems="center">
             <Box>
               <Box position="relative" mr={30} height={300} width="100%">
                 <Image fill={true} src={privateRoomImg} alt="about"></Image>
@@ -61,19 +57,21 @@ const ReservationsSection = () => {
                 Enjoy personalized service, custom menus, and a secluded
                 ambiance.
               </Text>
-              <Button
-                marginTop={20}
-                size="lg"
-                borderRadius="none"
-                fontFamily="Open Sans"
-                mt={10}
-                color="white"
-                border="1px solid #DCB015"
-                className={btnStyles.btnContainer}
-                _hover={{ color: "#DCB015" }}
-              >
-                Learn More
-              </Button>
+              <Link href="/services/private-room">
+                <Button
+                  marginTop={20}
+                  size="lg"
+                  borderRadius="none"
+                  fontFamily="Open Sans"
+                  mt={10}
+                  color="white"
+                  border="1px solid #DCB015"
+                  className={btnStyles.btnContainer}
+                  _hover={{ color: "#DCB015" }}
+                >
+                  Learn More
+                </Button>
+              </Link>
             </Box>
             <Box>
               {" "}
@@ -110,7 +108,7 @@ const ReservationsSection = () => {
                 fontSize={18}
                 width={300}
               >
-                Accommodates groups of 8 guests or more.
+                Accommodates groups of up to 20 guests.
               </Text>
               <Text
                 color="white"
@@ -122,19 +120,21 @@ const ReservationsSection = () => {
                 Special group menus available upon request, ensuring a memorable
                 dining experience.
               </Text>
-              <Button
-                marginTop={20}
-                size="lg"
-                borderRadius="none"
-                fontFamily="Open Sans"
-                mt={10}
-                color="white"
-                border="1px solid #DCB015"
-                className={btnStyles.btnContainer}
-                _hover={{ color: "#DCB015" }}
-              >
-                Learn More
-              </Button>
+              <Link href="/services/large-groups">
+                <Button
+                  marginTop={20}
+                  size="lg"
+                  borderRadius="none"
+                  fontFamily="Open Sans"
+                  mt={10}
+                  color="white"
+                  border="1px solid #DCB015"
+                  className={btnStyles.btnContainer}
+                  _hover={{ color: "#DCB015" }}
+                >
+                  Learn More
+                </Button>
+              </Link>
             </Box>
             <Box>
               {" "}
@@ -178,19 +178,22 @@ const ReservationsSection = () => {
               >
                 Dedicated event coordinator to assist with planning.
               </Text>
-              <Button
-                marginTop={20}
-                size="lg"
-                borderRadius="none"
-                fontFamily="Open Sans"
-                mt={10}
-                color="white"
-                border="1px solid #DCB015"
-                className={btnStyles.btnContainer}
-                _hover={{ color: "#DCB015" }}
-              >
-                Learn More
-              </Button>
+              <Link href="/services/weddings">
+                {" "}
+                <Button
+                  marginTop={20}
+                  size="lg"
+                  borderRadius="none"
+                  fontFamily="Open Sans"
+                  mt={10}
+                  color="white"
+                  border="1px solid #DCB015"
+                  className={btnStyles.btnContainer}
+                  _hover={{ color: "#DCB015" }}
+                >
+                  Learn More
+                </Button>
+              </Link>
             </Box>
           </Flex>
         </Box>
