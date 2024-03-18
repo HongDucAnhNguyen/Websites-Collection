@@ -45,7 +45,7 @@ const ParentAllServicesSection = () => {
                 and soak in the secluded ambiance that sets the stage for
                 memorable moments.
               </Text>
-              <Link href="/private-room">
+              <Link href="/services/private-room">
                 {" "}
                 <Button
                   size="lg"
@@ -97,7 +97,7 @@ const ParentAllServicesSection = () => {
                 group menus, crafted to ensure every moment shared is memorable
                 and every palate satisfied.
               </Text>
-              <Link href="/large-groups">
+              <Link href="/services/large-groups">
                 <Button
                   size="lg"
                   mt={10}
@@ -148,7 +148,7 @@ const ParentAllServicesSection = () => {
                 will guide you every step of the way, ensuring your wedding day
                 is as magical as you've always dreamed.
               </Text>
-              <Link href="/weddings">
+              <Link href="/services/weddings">
                 {" "}
                 <Button
                   size="lg"
