@@ -6,6 +6,7 @@ import Image from "next/image";
 import privateRoomService1 from "../../public/assets/images/service1.jpg";
 import largeGroupsService2 from "../../public/assets/images/service2.jpg";
 import weddingsService3 from "../../public/assets/images/service3.jpg";
+import Link from "next/link";
 const ParentAllServicesSection = () => {
   return (
     <Box bg="black">
@@ -44,19 +45,21 @@ const ParentAllServicesSection = () => {
                 and soak in the secluded ambiance that sets the stage for
                 memorable moments.
               </Text>
-
-              <Button
-                size="lg"
-                mt={10}
-                borderRadius="none"
-                fontFamily="Open Sans"
-                color="white"
-                border="1px solid #DCB015"
-                className={btnStyles.btnContainer}
-                _hover={{ color: "#DCB015" }}
-              >
-                Learn More
-              </Button>
+              <Link href="/private-room">
+                {" "}
+                <Button
+                  size="lg"
+                  mt={10}
+                  borderRadius="none"
+                  fontFamily="Open Sans"
+                  color="white"
+                  border="1px solid #DCB015"
+                  className={btnStyles.btnContainer}
+                  _hover={{ color: "#DCB015" }}
+                >
+                  Learn More
+                </Button>
+              </Link>
             </Box>
           </Flex>
 
@@ -84,7 +87,7 @@ const ParentAllServicesSection = () => {
                 size="lg"
                 fontWeight="normal"
               >
-                Private Room
+                Large groups
               </Heading>
               <Text fontSize={18} maxW={500} mt={5}>
                 Elevate your next family reunion, corporate event, or group
@@ -94,19 +97,20 @@ const ParentAllServicesSection = () => {
                 group menus, crafted to ensure every moment shared is memorable
                 and every palate satisfied.
               </Text>
-
-              <Button
-                size="lg"
-                mt={10}
-                borderRadius="none"
-                fontFamily="Open Sans"
-                color="white"
-                border="1px solid #DCB015"
-                className={btnStyles.btnContainer}
-                _hover={{ color: "#DCB015" }}
-              >
-                Learn More
-              </Button>
+              <Link href="/large-groups">
+                <Button
+                  size="lg"
+                  mt={10}
+                  borderRadius="none"
+                  fontFamily="Open Sans"
+                  color="white"
+                  border="1px solid #DCB015"
+                  className={btnStyles.btnContainer}
+                  _hover={{ color: "#DCB015" }}
+                >
+                  Learn More
+                </Button>
+              </Link>
             </Box>
           </Flex>
 
@@ -134,7 +138,7 @@ const ParentAllServicesSection = () => {
                 size="lg"
                 fontWeight="normal"
               >
-                Private Room
+                Weddings
               </Heading>
               <Text fontSize={18} maxW={500} mt={5}>
                 Celebrate your special day amidst the elegance and romance of
@@ -144,19 +148,21 @@ const ParentAllServicesSection = () => {
                 will guide you every step of the way, ensuring your wedding day
                 is as magical as you've always dreamed.
               </Text>
-
-              <Button
-                size="lg"
-                mt={10}
-                borderRadius="none"
-                fontFamily="Open Sans"
-                color="white"
-                border="1px solid #DCB015"
-                className={btnStyles.btnContainer}
-                _hover={{ color: "#DCB015" }}
-              >
-                Learn More
-              </Button>
+              <Link href="/weddings">
+                {" "}
+                <Button
+                  size="lg"
+                  mt={10}
+                  borderRadius="none"
+                  fontFamily="Open Sans"
+                  color="white"
+                  border="1px solid #DCB015"
+                  className={btnStyles.btnContainer}
+                  _hover={{ color: "#DCB015" }}
+                >
+                  Learn More
+                </Button>
+              </Link>
             </Box>
           </Flex>
         </Stack>
