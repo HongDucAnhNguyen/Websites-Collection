@@ -15,12 +15,14 @@ import Image from "next/image";
 import forkImg from "../../public/assets/images/fork.jpg";
 import tableKnifeImg from "../../public/assets/images/table_knife.jpg";
 import styles from "../../app/styles/button.module.css";
-
+import responsiveStyles from "../../app/styles/responsive/contactform.module.css";
+import tableKnifeHorizontal from "../../public/assets/images/table-knife-right-aboutus.jpg";
+import forkHorizontal from "../../public/assets/images/fork-right-aboutus.jpg";
 const Contact = () => {
   return (
     <Box bg="#303030">
       <Layout>
-        <Box mt={20} mb={20}>
+        <Box className={responsiveStyles.tablewareContactSectionContainer} >
           <SectionHeading
             align="center"
             content="Let's stay in touch"
@@ -34,10 +36,26 @@ const Contact = () => {
           >
             Have a question? Send us a Message{" "}
           </Text>
-          <Flex justifyContent="center" mt={5}>
+          <Flex
+            justifyContent="center"
+            mt={5}
+            className={responsiveStyles.contactTablewareFormContainer}
+          >
             <Box>
-              <Box position="relative" height={350} width={250}>
+              <Box
+                position="relative"
+                className={responsiveStyles.tablewareImg}
+              >
                 <Image fill={true} src={forkImg} alt="about"></Image>
+              </Box>
+            </Box>
+
+            <Box>
+              <Box
+                position="relative"
+                className={responsiveStyles.tablewareImgH}
+              >
+                <Image fill={true} src={forkHorizontal} alt="about"></Image>
               </Box>
             </Box>
 
@@ -94,7 +112,23 @@ const Contact = () => {
               </form>
             </Box>
             <Box>
-              <Box position="relative" height={350} width={250}>
+              <Box>
+                <Box
+                  position="relative"
+                  className={responsiveStyles.tablewareImgH}
+                >
+                  <Image
+                    fill={true}
+                    src={tableKnifeHorizontal}
+                    alt="about"
+                  ></Image>
+                </Box>
+              </Box>
+
+              <Box
+                position="relative"
+                className={responsiveStyles.tablewareImg}
+              >
                 <Image
                   fill={true}
                   src={tableKnifeImg}

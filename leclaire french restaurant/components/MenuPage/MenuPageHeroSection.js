@@ -24,6 +24,7 @@ const MenuPageHeroSection = () => {
             color="white"
             fontSize={18}
             fontFamily="Open Sans"
+            pl={5} pr={5}
           >
             Explore LeClaire's menu, where every dish is crafted to delight.
             From special menus tailored for intimate gatherings to large groups,

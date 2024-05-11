@@ -15,18 +15,20 @@ import { IoIosPricetag } from "react-icons/io";
 import { LuPackageCheck } from "react-icons/lu";
 import { IoIosPricetags } from "react-icons/io";
 import { MdDescription } from "react-icons/md";
+import styles from "../../app/styles/responsive/services.module.css";
 
 const WeddingServiceInfoSection = () => {
   return (
     <Box bg="black">
       <Layout>
-        <Box mt={20} m={20}>
+        <Box mt={20} mb={20}>
+          {" "}
           <SectionHeading
             align="center"
             content="Service Details"
           ></SectionHeading>
-          <Grid mt={10} templateColumns="repeat(2, 1fr)" gap={20}>
-            <GridItem w="100%">
+          <Grid mt={10} className={styles.serviceInfoGridContainer} gap={20}>
+            <GridItem pl={5} pr={5}>
               <HStack color="#DCB015">
                 <Heading fontSize={20} fontWeight="bold" fontFamily="Open Sans">
                   Description{" "}
@@ -48,7 +50,7 @@ const WeddingServiceInfoSection = () => {
                 </Text>
               </Stack>
             </GridItem>
-            <GridItem w="100%">
+            <GridItem pl={5} pr={5} w="100%">
               <HStack color="#DCB015">
                 <Heading fontSize={20} fontWeight="bold" fontFamily="Open Sans">
                   Detailed Pricing Information{" "}
@@ -74,7 +76,7 @@ const WeddingServiceInfoSection = () => {
                 </Text>
               </Stack>
             </GridItem>{" "}
-            <GridItem w="100%">
+            <GridItem pl={5} pr={5}>
               <HStack color="#DCB015">
                 <Heading fontSize={20} fontWeight="bold" fontFamily="Open Sans">
                   Average Pricing Range
@@ -92,7 +94,7 @@ const WeddingServiceInfoSection = () => {
                 </Text>
               </Stack>
             </GridItem>{" "}
-            <GridItem w="100%">
+            <GridItem pl={5} pr={5}>
               <HStack color="#DCB015">
                 <Heading fontSize={20} fontWeight="bold" fontFamily="Open Sans">
                   Included{" "}

@@ -15,6 +15,7 @@ import styles from "../../app/styles/hero.module.css";
 import Layout from "../GlobalComponents/Layout";
 import SectionHeading from "../GlobalComponents/SectionHeading";
 import btnStyles from "../../app/styles/button.module.css";
+import responsiveStyles from "../../app/styles/responsive/homepage.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
 const HeroSection = () => {
@@ -44,57 +45,68 @@ const HeroSection = () => {
         className={styles.homeHeroSection}
       >
         <Layout>
-          <Box ml={30}>
-            <motion.div variants={itemVariants}>
-              <SectionHeading
-                size={64}
-                maxWidth={500}
-                content="Authentic French Cuisine"
-              ></SectionHeading>
-            </motion.div>
-            <motion.div variants={itemVariants}>
-              {" "}
-              <Text
-                mt={30}
-                fontSize={18}
-                color="white"
-                fontFamily={"Open Sans"}
-                maxWidth="300"
-              >
-                Serving our customers a taste of France in every bite.
-              </Text>
-            </motion.div>
+          <Box className={responsiveStyles.heroSectionContainer}>
+            <Box>
+              <motion.div variants={itemVariants}>
+                <Box
+                  className={responsiveStyles.heroSectionHeadingTextContainer}
+                >
+                  <SectionHeading
+                    size={64}
+                    content="Authentic, affordable French Cuisine"
+                  ></SectionHeading>
+                </Box>
+              </motion.div>
+              <motion.div variants={itemVariants}>
+                {" "}
+                <Box
+                  className={
+                    responsiveStyles.heroSectionDescriptionTextContainer
+                  }
+                >
+                  {" "}
+                  <Text
+                    mt={30}
+                    fontSize={18}
+                    color="white"
+                    fontFamily={"Open Sans"}
+                  >
+                    Serving our customers a taste of France in every bite.
+                  </Text>
+                </Box>
+              </motion.div>
 
-            <motion.div variants={itemVariants}>
-              <ButtonGroup spacing={30} mt={30}>
-                <Link href="/menu">
-                  <Button
-                    size="lg"
-                    borderRadius="none"
-                    fontFamily="Open Sans"
-                    color="white"
-                    border="1px solid #DCB015"
-                    className={btnStyles.btnContainer}
-                    _hover={{ color: "#DCB015" }}
-                  >
-                    View Menu
-                  </Button>
-                </Link>
-                <Link href="/services">
-                  <Button
-                    size="lg"
-                    borderRadius="none"
-                    fontFamily="Open Sans"
-                    color="white"
-                    border="1px solid #DCB015"
-                    className={btnStyles.btnContainer}
-                    _hover={{ color: "#DCB015" }}
-                  >
-                    Reserve
-                  </Button>
-                </Link>
-              </ButtonGroup>
-            </motion.div>
+              <motion.div variants={itemVariants}>
+                <ButtonGroup spacing={30} mt={30}>
+                  <Link href="/menu">
+                    <Button
+                      size="lg"
+                      borderRadius="none"
+                      fontFamily="Open Sans"
+                      color="white"
+                      border="1px solid #DCB015"
+                      className={btnStyles.btnContainer}
+                      _hover={{ color: "#DCB015" }}
+                    >
+                      View Menu
+                    </Button>
+                  </Link>
+                  <Link href="/services">
+                    <Button
+                      size="lg"
+                      borderRadius="none"
+                      fontFamily="Open Sans"
+                      color="white"
+                      border="1px solid #DCB015"
+                      className={btnStyles.btnContainer}
+                      _hover={{ color: "#DCB015" }}
+                    >
+                      Reserve
+                    </Button>
+                  </Link>
+                </ButtonGroup>
+              </motion.div>
+            </Box>
           </Box>
         </Layout>
       </motion.div>

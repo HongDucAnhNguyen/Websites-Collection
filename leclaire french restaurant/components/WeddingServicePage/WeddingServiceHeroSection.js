@@ -20,6 +20,8 @@ const WeddingServiceHeroSection = () => {
             fontFamily="Open Sans"
             color="white"
             textAlign="center"
+            pl={5}
+            pr={5}
           >
             Create unforgettable moments on your special day at LeClaire. With
             our elegant ambiance, exquisite cuisine, and dedicated event

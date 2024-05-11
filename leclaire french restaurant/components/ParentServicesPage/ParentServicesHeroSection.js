@@ -23,8 +23,12 @@ const ParentServicesHeroSection = () => {
             fontFamily="Open Sans"
             fontSize={18}
             maxWidth={500}
+            pl={5} pr={5}
           >
-           Discover Services tailored to your every need. From intimate gatherings in our private rooms to accommodating large groups, and even hosting your dream wedding, our dedicated team ensures every moment is memorable.
+            Discover Services tailored to your every need. From intimate
+            gatherings in our private rooms to accommodating large groups, and
+            even hosting your dream wedding, our dedicated team ensures every
+            moment is memorable.
           </Text>
         </Flex>
       </Layout>

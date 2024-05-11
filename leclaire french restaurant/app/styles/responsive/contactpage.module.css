@@ -1,0 +1,24 @@
+.contactFormContainer {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 50px;
+  justify-content: space-around;
+}
+.contactFormContainer div {
+  border-radius: 10px;
+}
+.contactFormSectionContainer {
+  background: #303030;
+}
+@media screen and (max-width: 500px) {
+  .contactFormContainer {
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 0;
+  }
+  .contactMapContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

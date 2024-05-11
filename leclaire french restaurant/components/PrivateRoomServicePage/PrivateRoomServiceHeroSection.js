@@ -20,6 +20,7 @@ const PrivateRoomServiceHeroSection = () => {
             fontFamily="Open Sans"
             color="white"
             textAlign="center"
+            pl={5} pr={5}
           >
             Elevate your dining experience with our exclusive private room at
             LeClaire. Perfect for intimate gatherings, business meetings, or

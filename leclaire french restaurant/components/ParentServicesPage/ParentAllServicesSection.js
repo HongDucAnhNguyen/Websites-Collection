@@ -7,12 +7,15 @@ import privateRoomService1 from "../../public/assets/images/service1.jpg";
 import largeGroupsService2 from "../../public/assets/images/service2.jpg";
 import weddingsService3 from "../../public/assets/images/service3.jpg";
 import Link from "next/link";
+import responsiveStyles from "../../app/styles/responsive/allservices.module.css";
 const ParentAllServicesSection = () => {
   return (
     <Box bg="black">
       <Layout>
-        <Stack pt={20} pb={20} gap={10}>
+        <Flex direction="column" p={5} mb={20} mt={20} gap={10}>
           <Flex
+            className={responsiveStyles.serviceContainer}
+            borderRadius={7}
             justifyContent="space-between"
             alignItems="center"
             color="white"
@@ -20,7 +23,10 @@ const ParentAllServicesSection = () => {
             gap={10}
             p={10}
           >
-            <Box position="relative" height={320} width={310}>
+            <Box
+              position="relative"
+              className={responsiveStyles.serviceContainerImg}
+            >
               <Image
                 style={{ objectFit: "cover" }}
                 fill={true}
@@ -64,6 +70,8 @@ const ParentAllServicesSection = () => {
           </Flex>
 
           <Flex
+            className={responsiveStyles.serviceContainer}
+            borderRadius={7}
             justifyContent="space-between"
             alignItems="center"
             color="white"
@@ -71,7 +79,10 @@ const ParentAllServicesSection = () => {
             gap={20}
             p={10}
           >
-            <Box position="relative" height={320} width={310}>
+            <Box
+              position="relative"
+              className={responsiveStyles.serviceContainerImg}
+            >
               <Image
                 style={{ objectFit: "cover" }}
                 fill={true}
@@ -115,6 +126,8 @@ const ParentAllServicesSection = () => {
           </Flex>
 
           <Flex
+            className={responsiveStyles.serviceContainer}
+            borderRadius={7}
             justifyContent="space-between"
             alignItems="center"
             color="white"
@@ -122,7 +135,10 @@ const ParentAllServicesSection = () => {
             gap={20}
             p={10}
           >
-            <Box position="relative" height={320} width={310}>
+            <Box
+              position="relative"
+              className={responsiveStyles.serviceContainerImg}
+            >
               <Image
                 style={{ objectFit: "cover" }}
                 fill={true}
@@ -165,7 +181,7 @@ const ParentAllServicesSection = () => {
               </Link>
             </Box>
           </Flex>
-        </Stack>
+        </Flex>
       </Layout>
     </Box>
   );

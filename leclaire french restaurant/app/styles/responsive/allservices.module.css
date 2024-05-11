@@ -1,0 +1,14 @@
+.serviceContainerImg {
+  width: 310px;
+  height: 320px;
+}
+
+@media screen and (max-width: 500px) {
+  .serviceContainer {
+    flex-direction: column;
+  }
+  .serviceContainerImg {
+    width: 290px;
+    height: 270px;
+  }
+}

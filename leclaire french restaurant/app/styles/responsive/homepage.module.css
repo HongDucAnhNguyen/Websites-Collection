@@ -1,0 +1,220 @@
+.responsiveAboutUsSectionBodyText {
+  margin-top: 20px;
+  font-size: 18px;
+  color: "white";
+  font-family: "Open Sans", sans-serif;
+  width: 400px;
+}
+.deliveryAndPickupGridContainer {
+  grid-template-columns: repeat(2, 1fr);
+}
+.awardsImage {
+  height: 460px;
+  width: 480px;
+}
+.testimonialsGridContainer {
+  grid-template-columns: repeat(3, 1fr);
+}
+.testimonialsGridContainer.testimonialsContainer {
+  width: 300px;
+  height: 300px;
+}
+.reservationServiceImgContainer {
+  height: 300px;
+  width: 300px;
+}
+
+.reservationSectionContainer {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.responsiveAboutUsSectionImage {
+  width: 480px;
+  height: 460px;
+}
+
+.heroSectionHeadingTextContainer {
+  max-width: 700px;
+}
+.heroSectionDescriptionTextContainer {
+  max-width: 300px;
+}
+
+@media screen and (max-width: 1150px) {
+  .responsiveAboutUsSectionContainer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 40px;
+  }
+
+  .responsiveAboutUsSectionBodyText {
+    width: 600px;
+  }
+
+  .responsiveAboutUsSectionImage {
+    width: 600px;
+    height: 560px;
+  }
+
+  .heroSectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroSectionHeadingTextContainer {
+    max-width: 600px;
+  }
+
+  .reservationSectionContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reservationSectionContainer .reservationServiceContainer {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .reservationServiceContainer p {
+    width: 350px;
+  }
+
+  .deliveryAndPickupSubContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .testimonialsSectionContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .testimonialsSectionContainer .testimonialDescriptionText {
+    text-align: center;
+  }
+
+  .testimonialsGridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonialsGridContainer.testimonialsContainer {
+    width: 400px;
+    height: 400px;
+  }
+  .awardsSectionContainer {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+  .awardsSectionSubContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .heroSectionHeadingTextContainer {
+    max-width: 500px;
+  }
+  .responsiveAboutUsSectionBodyText {
+    width: 500px;
+  }
+
+  .responsiveAboutUsSectionImage {
+    width: 500px;
+    height: 460px;
+  }
+
+  .testimonialsGridContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .testimonialsGridContainer .testimonialsContainer {
+    width: 500px;
+  }
+  .reservationServiceImgContainer {
+    height: 500px;
+    width: 500px;
+  }
+  .reservationSectionContainer .reservationServiceContainer {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .reservationServiceContainer p {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .heroSectionHeadingTextContainer {
+    max-width: 350px;
+    margin-top: 0;
+  }
+
+  .deliveryAndPickupGridContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .deliveryAndPickupSubContainer {
+    width: 350px;
+  }
+
+  .awardsSectionSubContainer {
+    width: 350px;
+  }
+
+  .responsiveAboutUsSectionBodyText {
+    width: 330px;
+  }
+
+  .responsiveAboutUsSectionImage {
+    width: 350px;
+    height: 310px;
+  }
+
+  .testimonialDescriptionText {
+    width: 350px;
+  }
+
+  .testimonialsGridContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .testimonialsGridContainer .testimonialsContainer {
+    width: 350px;
+  }
+  .reservationServiceImgContainer {
+    height: 270px;
+    width: 290px;
+  }
+  .reservationSectionContainer .reservationServiceContainer {
+    flex-direction: column;
+    width: 330px;
+  }
+  .reservationSectionContainer {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .deliveryAndPickupSubContainer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .reservationServiceContainer p {
+    width: 290px;
+  }
+
+  .awardsImage {
+    height: 310px;
+    width: 330px;
+  }
+}

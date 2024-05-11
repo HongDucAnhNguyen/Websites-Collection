@@ -20,6 +20,7 @@ const LargeGroupServiceHeroSection = () => {
           fontFamily="Open Sans"
           color="white"
           textAlign="center"
+          pl={5} pr={5}
         >
           Gather your friends, family, or colleagues for a memorable dining
           experience at LeClaire. Our spacious restaurant can accommodate large

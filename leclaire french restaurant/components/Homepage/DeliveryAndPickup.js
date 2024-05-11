@@ -6,32 +6,27 @@ import skipTheDishesImg from "../../public/assets/images/skipthedishes.jpg";
 import uberEatsImg from "../../public/assets/images/ubereats.jpg";
 import doordashImg from "../../public/assets/images/doordash.jpg";
 import callInImg from "../../public/assets/images/callinbutton.jpg";
+import responsiveStyles from "../../app/styles/responsive/homepage.module.css";
 import Image from "next/image";
 const DeliveryAndPickup = () => {
   return (
     <Box bg="black" color="white">
       <Layout>
-       
-          <Flex mt={20} mb={20} justifyContent="space-between">
-            <Box>
+        <Flex mt={20} mb={20} justifyContent="center">
+          <Flex
+            gap={10}
+            className={responsiveStyles.deliveryAndPickupSubContainer}
+          >
+            <Box maxWidth={450}>
               {" "}
-              <SectionHeading
-                maxWidth={500}
-                content="Delivery and Pickup"
-              ></SectionHeading>
-              <Text
-                mt={3}
-                maxW={300}
-                fontFamily={"Open Sans"}
-                fontSize={18}
-                color="white"
-              >
+              <SectionHeading content="Delivery and Pickup"></SectionHeading>
+              <Text mt={3} fontFamily={"Open Sans"} fontSize={18} color="white">
                 Get your order through your favorite food delivery service or
                 simply for pickup.
               </Text>
             </Box>
 
-            <Grid templateColumns="repeat(2, 1fr)" gap={50}>
+            <Grid maxW={500} className={responsiveStyles.deliveryAndPickupGridContainer} gap={30}>
               <GridItem>
                 <Box position="relative" height={70} width={210}>
                   <Image
@@ -43,35 +38,22 @@ const DeliveryAndPickup = () => {
               </GridItem>
               <GridItem>
                 <Box position="relative" height={70} width={210}>
-                  <Image
-                    fill={true}
-                    src={uberEatsImg}
-                    alt="uber eats"
-                  ></Image>
+                  <Image fill={true} src={uberEatsImg} alt="uber eats"></Image>
                 </Box>
               </GridItem>
               <GridItem>
                 <Box position="relative" height={70} width={210}>
-                  <Image
-                    fill={true}
-                    src={callInImg}
-                    alt="call in"
-                  ></Image>
+                  <Image fill={true} src={callInImg} alt="call in"></Image>
                 </Box>
               </GridItem>
               <GridItem>
                 <Box position="relative" height={70} width={210}>
-                  <Image
-                    fill={true}
-                    src={doordashImg}
-                    alt="door dash"
-                  ></Image>
+                  <Image fill={true} src={doordashImg} alt="door dash"></Image>
                 </Box>
               </GridItem>
             </Grid>
           </Flex>
-         
-        
+        </Flex>
       </Layout>
     </Box>
   );

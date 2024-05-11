@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Layout from "../GlobalComponents/Layout";
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text, SimpleGrid } from "@chakra-ui/react";
 import Link from "next/link";
 import styles from "../../app/styles/navbar.module.css";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
@@ -11,6 +11,7 @@ import { HStack } from "@chakra-ui/react";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaPhone } from "react-icons/fa";
+import responsiveStyles from "../../app/styles/responsive/footer.module.css";
 const Footer = () => {
   return (
     <Box bg="black">
@@ -29,142 +30,103 @@ const Footer = () => {
               },
             }}
           ></motion.div>
-          <Flex justifyContent="space-evenly" mt={20} mb={20} gap={10}>
-            <motion.div
-              initial={{ y: 20 }}
-              whileInView={{
-                y: 0,
-              }}
-              viewport={{ once: true }}
-            >
-              {" "}
-              <Box maxWidth={290} ml={30} className={styles.Logo}>
-                <Box display="inline-block">
-                  <Link href="/">
-                    <Heading fontSize={30} fontFamily={"Open Sans"}>
-                      Leclaire
-                    </Heading>
-                  </Link>
+          <Flex justifyContent={"center"}>
+            <Box className={responsiveStyles.footerContainer} mt={20} mb={20}>
+              <motion.div
+                initial={{ y: 20 }}
+                whileInView={{
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+              >
+                {" "}
+                <Box color="white" className={responsiveStyles.footerSubSectionContainer}>
+                  <Box maxWidth={290} className={styles.Logo}>
+                    <Box display="inline-block">
+                      <Link href="/">
+                        <Heading fontSize={30} fontFamily={"Open Sans"}>
+                          Leclaire
+                        </Heading>
+                      </Link>
+                    </Box>
+
+                    <Text
+                      mt={5}
+                      
+                      fontFamily={"Open Sans"}
+                      fontSize={18}
+                    >
+                      LeClaire is a celebrated French restaurant in Calgary,
+                      blending tradition and innovation to create unforgettable
+                      dining experiences.
+                    </Text>
+
+                    <Link href="/menu">
+                      <Button
+                        borderRadius="none"
+                        fontFamily="Open Sans"
+                        color="white"
+                        border="1px solid #DCB015"
+                        className={btnStyles.btnContainer}
+                        _hover={{ color: "#DCB015" }}
+                        mt={5}
+                      >
+                        View Menu
+                      </Button>
+                    </Link>
+                  </Box>
                 </Box>
-
-                <Text
-                  mt={5}
+              </motion.div>
+              <motion.div
+                initial={{ y: 20 }}
+                whileInView={{
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+              >
+                <Box
                   color="white"
-                  fontFamily={"Open Sans"}
-                  fontSize={18}
+                  className={responsiveStyles.footerSubSectionContainer}
                 >
-                  LeClaire is a celebrated French restaurant in Calgary,
-                  blending tradition and innovation to create unforgettable
-                  dining experiences.
-                </Text>
-                <Link href="/menu">
-                  <Button
-                    borderRadius="none"
-                    fontFamily="Open Sans"
-                    color="white"
-                    border="1px solid #DCB015"
-                    className={btnStyles.btnContainer}
-                    _hover={{ color: "#DCB015" }}
-                    mt={5}
-                  >
-                    View Menu
-                  </Button>
-                </Link>
-              </Box>
-            </motion.div>
-            <motion.div
-              initial={{ y: 20 }}
-              whileInView={{
-                y: 0,
-              }}
-              viewport={{ once: true }}
-            >
-              <Box color="white">
-                <Heading fontSize={20} fontFamily={"Open Sans"}>
-                  Our Services
-                </Heading>
-                <Link href="/services/private-room">
-                  {" "}
-                  <Text
-                    mt={5}
-                    color="white"
-                    fontFamily={"Open Sans"}
-                    fontSize={18}
-                  >
-                    Private Room
-                  </Text>
-                </Link>
-
-                <Link href="/services/large-groups">
-                  {" "}
-                  <Text
-                    mt={5}
-                    color="white"
-                    fontFamily={"Open Sans"}
-                    fontSize={18}
-                  >
-                    Large Groups
-                  </Text>
-                </Link>
-                <Link href="/services/weddings">
-                  {" "}
-                  <Text
-                    mt={5}
-                    color="white"
-                    fontFamily={"Open Sans"}
-                    fontSize={18}
-                  >
-                    Weddings
-                  </Text>
-                </Link>
-                <Link href="/services">
-                  {" "}
-                  <Button
-                    borderRadius="none"
-                    fontFamily="Open Sans"
-                    color="white"
-                    border="1px solid #DCB015"
-                    className={btnStyles.btnContainer}
-                    _hover={{ color: "#DCB015" }}
-                    mt={5}
-                  >
-                    Learn More
-                  </Button>
-                </Link>
-              </Box>
-            </motion.div>
-            <motion.div
-              initial={{ y: 20 }}
-              whileInView={{
-                y: 0,
-              }}
-              viewport={{ once: true }}
-            >
-              <Box color="white">
-                <Box>
-                  {" "}
                   <Heading fontSize={20} fontFamily={"Open Sans"}>
-                    Contact Us
+                    Our Services
                   </Heading>
-                  <HStack mt={5}>
-                    <MdEmail></MdEmail>
-                    <Text color="white" fontFamily="Open Sans" fontSize={18}>
-                      leclairemail@mail.com
+                  <Link href="/services/private-room">
+                    {" "}
+                    <Text
+                      mt={5}
+                      color="white"
+                      fontFamily={"Open Sans"}
+                      fontSize={18}
+                    >
+                      Private Room
                     </Text>
-                  </HStack>
-                  <HStack mt={5} alignItems="center">
-                    <FaLocationDot></FaLocationDot>
-                    <Text color="white" fontFamily="Open Sans" fontSize={18}>
-                      [restaurant address]
+                  </Link>
+
+                  <Link href="/services/large-groups">
+                    {" "}
+                    <Text
+                      mt={5}
+                      color="white"
+                      fontFamily={"Open Sans"}
+                      fontSize={18}
+                    >
+                      Large Groups
                     </Text>
-                  </HStack>
-                  <HStack mt={5} alignItems="center">
-                    <FaPhone></FaPhone>
-                    <Text color="white" fontFamily="Open Sans" fontSize={18}>
-                      (+1) [restaurant number]
+                  </Link>
+                  <Link href="/services/weddings">
+                    {" "}
+                    <Text
+                      mt={5}
+                      color="white"
+                      fontFamily={"Open Sans"}
+                      fontSize={18}
+                    >
+                      Weddings
                     </Text>
-                  </HStack>
-                  <Link href="/contact">
+                  </Link>
+                  <Link href="/services">
+                    {" "}
                     <Button
                       borderRadius="none"
                       fontFamily="Open Sans"
@@ -174,55 +136,108 @@ const Footer = () => {
                       _hover={{ color: "#DCB015" }}
                       mt={5}
                     >
-                      Contact Us
+                      Learn More
                     </Button>
                   </Link>
                 </Box>
-              </Box>
-            </motion.div>
-            <motion.div
-              initial={{ y: 20 }}
-              whileInView={{
-                y: 0,
-              }}
-              viewport={{ once: true }}
-            >
-              <Box color="white">
-                <Heading fontSize={20} fontFamily={"Open Sans"}>
-                  Socials
-                </Heading>
-                <Flex mt={5} gap={3}>
-                  <Link href="/">
-                    <FaFacebook />
-                  </Link>
-                  <Link href="/">
-                    <FaInstagram />
-                  </Link>
-                </Flex>
-                <Box mt={7}>
-                  {" "}
-                  <Heading fontSize={20} fontFamily={"Open Sans"}>
-                    Opening Hours
-                  </Heading>
-                  <Text
-                    mt={5}
-                    color="white"
-                    fontFamily="Open Sans"
-                    fontSize={18}
-                  >
-                    Sat-Sun : 9am-11pm
-                  </Text>
-                  <Text
-                    mt={5}
-                    color="white"
-                    fontFamily="Open Sans"
-                    fontSize={18}
-                  >
-                    Mon-Fri : 11am-11pm
-                  </Text>
+              </motion.div>
+              <motion.div
+                initial={{ y: 20 }}
+                whileInView={{
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+              >
+                <Box
+                  color="white"
+                  className={responsiveStyles.footerSubSectionContainer}
+                >
+                  <Box>
+                    {" "}
+                    <Heading fontSize={20} fontFamily={"Open Sans"}>
+                      Contact Us
+                    </Heading>
+                    <HStack mt={5}>
+                      <MdEmail></MdEmail>
+                      <Text color="white" fontFamily="Open Sans" fontSize={18}>
+                        leclairemail@mail.com
+                      </Text>
+                    </HStack>
+                    <HStack mt={5} alignItems="center">
+                      <FaLocationDot></FaLocationDot>
+                      <Text color="white" fontFamily="Open Sans" fontSize={18}>
+                        [restaurant address]
+                      </Text>
+                    </HStack>
+                    <HStack mt={5} alignItems="center">
+                      <FaPhone></FaPhone>
+                      <Text color="white" fontFamily="Open Sans" fontSize={18}>
+                        (+1) [restaurant number]
+                      </Text>
+                    </HStack>
+                    <Link href="/contact">
+                      <Button
+                        borderRadius="none"
+                        fontFamily="Open Sans"
+                        color="white"
+                        border="1px solid #DCB015"
+                        className={btnStyles.btnContainer}
+                        _hover={{ color: "#DCB015" }}
+                        mt={5}
+                      >
+                        Contact Us
+                      </Button>
+                    </Link>
+                  </Box>
                 </Box>
-              </Box>
-            </motion.div>
+              </motion.div>
+              <motion.div
+                initial={{ y: 20 }}
+                whileInView={{
+                  y: 0,
+                }}
+                viewport={{ once: true }}
+              >
+                <Box
+                  color="white"
+                  className={responsiveStyles.footerSubSectionContainer}
+                >
+                  <Heading fontSize={20} fontFamily={"Open Sans"}>
+                    Socials
+                  </Heading>
+                  <Flex gap={3} mt={5}>
+                    <Link href="/">
+                      <FaFacebook color="#dcb015"></FaFacebook>
+                    </Link>
+                    <Link href="/">
+                      <FaInstagram color="#dcb015"></FaInstagram>
+                    </Link>
+                  </Flex>
+                  <Box mt={7}>
+                    {" "}
+                    <Heading fontSize={20} fontFamily={"Open Sans"}>
+                      Opening Hours
+                    </Heading>
+                    <Text
+                      mt={5}
+                      color="white"
+                      fontFamily="Open Sans"
+                      fontSize={18}
+                    >
+                      Sat-Sun : 9am-11pm
+                    </Text>
+                    <Text
+                      mt={5}
+                      color="white"
+                      fontFamily="Open Sans"
+                      fontSize={18}
+                    >
+                      Mon-Fri : 11am-11pm
+                    </Text>
+                  </Box>
+                </Box>
+              </motion.div>
+            </Box>
           </Flex>
           <Box p={5} color="white" textAlign="center">
             <Text>© 2024 Hong Duc Anh Nguyen. All Rights Reserved.</Text>

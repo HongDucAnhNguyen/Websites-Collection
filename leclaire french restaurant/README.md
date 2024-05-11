@@ -1,4 +1,8 @@
-## Restaurant Website
+## Leclaire - French Restaurant Website
+
+### About
+
+Static website for Leclaire - French restaurant
 
 #### Design File:
 

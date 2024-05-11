@@ -1,3 +1,10 @@
+.navBarContainer {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+}
+
 .navLinks a {
   color: white;
   font-family: "Open Sans", sans-serif;
@@ -5,7 +12,31 @@
   text-align: center;
 }
 
+.navLinksResponsive {
+  display: none;
+}
+
 .Logo a {
   text-decoration: none;
   color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .navBarContainer {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navLinks {
+    display: none;
+  }
+
+  .navLinksResponsive {
+    display: block;
+  }
+  .navBarContainer {
+    justify-content: space-between;
+    padding-right: 30px;
+  }
 }

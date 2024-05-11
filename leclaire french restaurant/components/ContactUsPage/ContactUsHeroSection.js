@@ -24,6 +24,7 @@ const ContactUsHeroSection = () => {
               fontFamily="Open Sans"
               fontSize={18}
               maxWidth={500}
+              pl={5} pr={5}
             >
               Have a question, comment, or reservation request? Feel free to
               reach out to us ! Whether you're planning a special event, seeking

@@ -20,6 +20,7 @@ const AboutUsHeroSection = () => {
                 fontFamily="Open Sans"
                 fontSize={18}
                 maxWidth={400}
+                pl={5} pr={5}
               >
                 Discover LeClaire: Where the timeless elegance of French
                 tradition converges with culinary excellence in the heart of

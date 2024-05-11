@@ -1,0 +1,17 @@
+.menuDishImgContainer {
+  width: 200px;
+  height: 150px;
+}
+
+@media screen and (max-width: 500px) {
+  .menupageMenuContainer {
+    flex-direction: column;
+  }
+  .menuDishContainer {
+    flex-direction: column;
+  }
+  .menuDishImgContainer {
+    width: 290px;
+    height: 270px;
+  }
+}

@@ -4,7 +4,11 @@ import React from "react";
 const SectionHeading = ({ size, align, maxWidth, content }) => {
   return (
     <Text
-      fontSize={size ? size : 48}
+      fontSize={{
+        lg: size ? size : 48,
+        md: size ? size : 48,
+        base: size == 64 ? 45 : 35,
+      }}
       color="#DCB015"
       fontFamily={"Jacques"}
       maxWidth={maxWidth ? maxWidth : ""}

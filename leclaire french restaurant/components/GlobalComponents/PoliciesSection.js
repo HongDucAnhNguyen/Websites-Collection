@@ -14,18 +14,23 @@ import { HiMiniReceiptRefund } from "react-icons/hi2";
 import { MdFreeCancellation } from "react-icons/md";
 import { MdOutlineSecurity } from "react-icons/md";
 import { MdPriceChange } from "react-icons/md";
+import styles from "../../app/styles/responsive/services.module.css";
 
 const PoliciesSection = ({ cancellationTimeLimit }) => {
   return (
     <Box bg="#303030">
       <Layout>
-        <Box mt={20} m={20}>
+        <Box mt={20} mb={20}>
           <SectionHeading
             align="center"
             content="Service Policies"
           ></SectionHeading>
-          <Grid mt={10} templateColumns="repeat(2, 1fr)" gap={20}>
-            <GridItem w="100%">
+          <Grid
+            mt={10}
+            className={styles.servicePoliciesGridContainer}
+            gap={20}
+          >
+            <GridItem pl={5} pr={5} w="100%">
               <HStack color="#DCB015">
                 <Heading fontSize={20} fontWeight="bold" fontFamily="Open Sans">
                   Cancellation Policy{" "}
@@ -40,7 +45,7 @@ const PoliciesSection = ({ cancellationTimeLimit }) => {
                 before the reservation may incur a cancellation fee.
               </Text>
             </GridItem>
-            <GridItem w="100%">
+            <GridItem pl={5} pr={5} w="100%">
               <HStack color="#DCB015">
                 <Heading fontSize={20} fontWeight="bold" fontFamily="Open Sans">
                   Refund Policy{" "}
@@ -54,7 +59,7 @@ const PoliciesSection = ({ cancellationTimeLimit }) => {
               </Text>
             </GridItem>
 
-            <GridItem w="100%">
+            <GridItem pl={5} pr={5} w="100%">
               <HStack color="#DCB015">
                 <Heading fontSize={20} fontWeight="bold" fontFamily="Open Sans">
                   Security Deposit{" "}
@@ -69,7 +74,7 @@ const PoliciesSection = ({ cancellationTimeLimit }) => {
               </Text>
             </GridItem>
 
-            <GridItem w="100%">
+            <GridItem pl={5} pr={5} w="100%">
               <HStack color="#DCB015">
                 <Heading fontSize={20} fontWeight="bold" fontFamily="Open Sans">
                   Additional Charges

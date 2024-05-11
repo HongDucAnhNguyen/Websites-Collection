@@ -19,16 +19,20 @@ import Link from "next/link";
 import btnStyles from "../../app/styles/button.module.css";
 import ggMapsImg from "../../public/assets/images/ggmaps.jpg";
 import Image from "next/image";
-
+import styles from "../../app/styles/responsive/contactpage.module.css";
 const ContactUsFormSection = () => {
   return (
-    <Box bg="#303030">
+    <Box className={styles.contactFormSectionContainer}>
       <Layout>
-        <Flex mt={20} mb={20} gap={20} justifyContent="space-around">
-          <Box bg="black" borderRadius={10} p={10}>
+        <Flex className={styles.contactFormContainer}>
+          <Box bg="black" p={10}>
             <Box className={headingbtnStyles.Logo}>
               <Link href="/">
-                <Heading display="inline-block" fontSize={32} fontFamily={"Open Sans"}>
+                <Heading
+                  display="inline-block"
+                  fontSize={32}
+                  fontFamily={"Open Sans"}
+                >
                   Leclaire
                 </Heading>
               </Link>
@@ -98,62 +102,63 @@ const ContactUsFormSection = () => {
               </form>
             </Box>
           </Box>
-          <Box>
-            <Heading color="white" fontSize={20} fontFamily={"Open Sans"}>
-              View location on Maps
-            </Heading>
-            <Link
-              title="click to open google maps"
-              href="https://maps.app.goo.gl/oz9AR3BN7KRgVPCbA"
-            >
+          <Box className={styles.contactMapContainer}>
+            <Box>
               {" "}
-              <Box mt={5} position="relative" width={350} height={300}>
-                <Image
-                  alt="google maps directions"
-                  fill={true}
-                  src={ggMapsImg}
-                ></Image>
+              <Heading color="white" fontSize={20} fontFamily={"Open Sans"}>
+                View location on Maps
+              </Heading>
+              <Link
+                title="click to open google maps"
+                href="https://maps.app.goo.gl/oz9AR3BN7KRgVPCbA"
+              >
+                {" "}
+                <Box mt={5} position="relative" width={350} height={300}>
+                  <Image
+                    alt="google maps directions"
+                    fill={true}
+                    src={ggMapsImg}
+                  ></Image>
+                </Box>
+              </Link>
+              <Box color="white" mt={20}>
+                <Box>
+                  {" "}
+                  <Heading fontSize={20} fontFamily={"Open Sans"}>
+                    Direct Contact Information
+                  </Heading>
+                  <HStack mt={5}>
+                    <MdEmail></MdEmail>
+                    <Text color="white" fontFamily="Open Sans" fontSize={18}>
+                      leclairemail@mail.com
+                    </Text>
+                  </HStack>
+                  <HStack mt={5} alignItems="center">
+                    <FaLocationDot></FaLocationDot>
+                    <Text color="white" fontFamily="Open Sans" fontSize={18}>
+                      [restaurant address]
+                    </Text>
+                  </HStack>
+                  <HStack mt={5} alignItems="center">
+                    <FaPhone></FaPhone>
+                    <Text color="white" fontFamily="Open Sans" fontSize={18}>
+                      (+1) [restaurant number]
+                    </Text>
+                  </HStack>
+                </Box>
               </Box>
-            </Link>
-
-            <Box color="white" mt={20}>
-              <Box>
+              <Box mt={20} color="white">
                 {" "}
                 <Heading fontSize={20} fontFamily={"Open Sans"}>
-                  Direct Contact Information
+                  Opening Hours
                 </Heading>
-                <HStack mt={5}>
-                  <MdEmail></MdEmail>
-                  <Text color="white" fontFamily="Open Sans" fontSize={18}>
-                    leclairemail@mail.com
-                  </Text>
-                </HStack>
-                <HStack mt={5} alignItems="center">
-                  <FaLocationDot></FaLocationDot>
-                  <Text color="white" fontFamily="Open Sans" fontSize={18}>
-                    [restaurant address]
-                  </Text>
-                </HStack>
-                <HStack mt={5} alignItems="center">
-                  <FaPhone></FaPhone>
-                  <Text color="white" fontFamily="Open Sans" fontSize={18}>
-                    (+1) [restaurant number]
-                  </Text>
-                </HStack>
+                <Text mt={5} fontFamily="Open Sans" fontSize={18}>
+                  Sat-Sun : 9am-11pm
+                </Text>
+                <Text mt={5} fontFamily="Open Sans" fontSize={18}>
+                  Mon-Fri : 11am-11pm
+                </Text>
               </Box>
-            </Box>
-
-            <Box mt={20} color="white">
-              {" "}
-              <Heading fontSize={20} fontFamily={"Open Sans"}>
-                Opening Hours
-              </Heading>
-              <Text mt={5} fontFamily="Open Sans" fontSize={18}>
-                Sat-Sun : 9am-11pm
-              </Text>
-              <Text mt={5} fontFamily="Open Sans" fontSize={18}>
-                Mon-Fri : 11am-11pm
-              </Text>
             </Box>
           </Box>
         </Flex>

@@ -6,6 +6,7 @@ import Image from "next/image";
 import Step1Img from "../../public/assets/images/step1.jpg";
 import Step2Img from "../../public/assets/images/step2.jpg";
 import Step3Img from "../../public/assets/images/step3.jpg";
+import responsiveStyles from '../../app/styles/responsive/services.module.css'
 const ReservationProcessSection = () => {
   return (
     <Box bg="black">
@@ -16,7 +17,7 @@ const ReservationProcessSection = () => {
             align="center"
           ></SectionHeading>
 
-          <Flex gap={20} mt={10} justifyContent="center" alignItems="center">
+          <Flex p={5} className={responsiveStyles.reservationProcessSectionContainer} gap={20} mt={10} justifyContent="center" alignItems="center" >
             <Box>
               <Box position="relative" width={70} height={50}>
                 <Image fill src={Step1Img} alt="step 1"></Image>

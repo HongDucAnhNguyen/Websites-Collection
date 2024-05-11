@@ -5,20 +5,30 @@ import SectionHeading from "../GlobalComponents/SectionHeading";
 import Image from "next/image";
 import awardsImage from "../../public/assets/images/awards.jpg";
 import awardsIcon from "../../public/assets/images/awards_icon.jpg";
+import responsiveStyles from "../../app/styles/responsive/homepage.module.css";
+
 const AwardsSection = () => {
   return (
     <Box bg="black">
       <Layout>
-        <Flex gap={20} mt={20} mb={20} justifyContent="space-between">
-          <Box position="relative" height={460} width={480}>
-            <Image alt="awards img" fill={true} src={awardsImage}></Image>
-          </Box>
-          <Box>
+        <Flex
+          className={responsiveStyles.awardsSectionContainer}
+          gap={20}
+          mt={20}
+          mb={20}
+          justifyContent="space-between"
+        >
+          {" "}
+          <Box
+            maxWidth={480}
+            className={responsiveStyles.awardsSectionSubContainer}
+          >
             <Flex gap={5}>
               <Box position="relative" width={70} height={70}>
                 <Image src={awardsIcon} fill alt="awards icon"></Image>
               </Box>
-              <SectionHeading content="Awards" maxWidth={500}></SectionHeading>
+
+              <SectionHeading content="Awards"></SectionHeading>
               <Box position="relative" width={70} height={70}>
                 <Image src={awardsIcon} fill alt="awards icon"></Image>
               </Box>
@@ -47,6 +57,9 @@ const AwardsSection = () => {
                 "Top Fine Dining Destination" by Epicurean Gazette
               </ListItem>
             </List>
+          </Box>
+          <Box position="relative" className={responsiveStyles.awardsImage}>
+            <Image alt="awards img" fill={true} src={awardsImage}></Image>
           </Box>
         </Flex>
       </Layout>
