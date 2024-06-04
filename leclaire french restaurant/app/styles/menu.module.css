@@ -9,6 +9,10 @@
   }
   .menuDishContainer {
     flex-direction: column;
+    /* background-image: url("../../public/assets/images/french_floral_background.jpg") !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important; */
   }
   .menuDishImgContainer {
     width: 290px;
